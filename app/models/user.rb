@@ -5,5 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :responses, through: :question_users
-  has_many :questions, through: :question_users
 end
