@@ -11,4 +11,10 @@ class User < ApplicationRecord
   # has_many :matchings, dependent: :destroy
 
   has_one :profile, dependent: :destroy
+
+  def matched_users
+    User.joins(:responses)
+        .where(responses: { id: responses.pluck(:id) })
+        .where.not(users: { id: id }).distinct
+  end
 end
