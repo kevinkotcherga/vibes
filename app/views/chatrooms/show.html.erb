@@ -1,19 +1,16 @@
-<div class="container chatroom">
+<div class="px-3">
   <h1>Talk with your match !<%= @chatroom.name %></h1>
 
-  <div class="messages">
-    <% @chatroom.messages.each do |message| %>
-      <div id="message-<%= message.id %>">
-        <small>
-          <strong><%= message.user.first_name %></strong>
-          <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-        </small>
-        <p><%= message.content %></p>
-      </div>
-    <% end %>
+  <div class="messages" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+    <div class="messages">
+      <% @chatroom.messages.each do |message| %>
+        <%= render "messages/message", message: message, first_user: @chatroom.messages.first.user.id %>
+      <% end %>
+    </div>
   </div>
 
   <%= simple_form_for [@chatroom, @message], remote: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Type your message...#{@chatroom.name}" %>
   <% end %>
+
 </div>
