@@ -1,6 +1,10 @@
+User.destroy_all
+Matching.destroy_all
+Profile.destroy_all
 Response.destroy_all
 Question.destroy_all
 
+p 'creating questions'
 question1 = Question.create(label: 'Vous êtes :', order: 1)
 question2 = Question.create(label: 'Vous êtes à la recherche de :', order: 2)
 question3 = Question.create(label: 'Vos amis dites de vous que vous êtes :', order: 3)
@@ -15,6 +19,8 @@ question11 = Question.create(label: "Êtes-vous intéressé par l'horoscope ?", 
 question12 = Question.create(label: 'Quels sont vos hobbies ?', order: 12)
 question13 = Question.create(label: 'Quels animaux préférez-vous ?', order: 13)
 
+
+p 'creating responses'
 response1 = Response.create(label: "Femme", question: question1)
 response2 = Response.create(label: "Homme", question: question1)
 response3 = Response.create(label: "Non-binaire", question: question1)
@@ -147,3 +153,12 @@ response116 = Response.create(label: "Oiseaux", question: question13)
 response117 = Response.create(label: "Poissons", question: question13)
 response118 = Response.create(label: "Reptiles", question: question13)
 response119 = Response.create(label: "Rongeurs", question: question13)
+
+
+p 'creating users'
+user1 = User.create!(email:"seb@gmail.com", password:"azertyuiop")
+user2 = User.create!(email: "victor@gmail.com", password: "qsdfghjklm")
+
+p 'creating profiles'
+profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28, bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉 Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon feeling et des shootings de dressing.")
+profile2 = Profile.create!(user_id: user2.id, first_name: "Victor", last_name: "Cai", age: 23, bio: "Hello, appelez-moi Zhijie.Si j'étais un temps je serai le plus que parfait ! A noter : je suis fan des ours 😏" )
