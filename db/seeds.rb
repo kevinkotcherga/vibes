@@ -147,3 +147,7 @@ response116 = Response.create(label: "Oiseaux", question: question13)
 response117 = Response.create(label: "Poissons", question: question13)
 response118 = Response.create(label: "Reptiles", question: question13)
 response119 = Response.create(label: "Rongeurs", question: question13)
+
+user1 = Profile.create(first_name: "Sébastien", last_name: "Techy", birth_date: )
+user2 =
+user3 =
