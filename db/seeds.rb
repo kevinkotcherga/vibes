@@ -1,3 +1,6 @@
+User.destroy_all
+Matching.destroy_all
+Profile.destroy_all
 Response.destroy_all
 Question.destroy_all
 
@@ -153,8 +156,9 @@ response119 = Response.create(label: "Rongeurs", question: question13)
 
 
 p 'creating users'
-user1 = User.create(email:"seb@gmail.com", password:"azertyuiop")
-# user2 =
+user1 = User.create!(email:"seb@gmail.com", password:"azertyuiop")
+user2 = User.create!(email: "victor@gmail.com", password: "qsdfghjklm")
 
 p 'creating profiles'
-profile1 = Profile.create(user_id: user1.id, last_name:"Saunier", first_name: "Seb", age: 30, bio: "COUCOU")
+profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28, bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉 Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon feeling et des shootings de dressing.")
+profile2 = Profile.create!(user_id: user2.id, first_name: "Victor", last_name: "Cai", age: 23, bio: "Hello, appelez-moi Zhijie.Si j'étais un temps je serai le plus que parfait ! A noter : je suis fan des ours 😏" )
