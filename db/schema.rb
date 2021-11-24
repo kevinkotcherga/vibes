@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_23_142137) do
+
+ActiveRecord::Schema.define(version: 2021_11_23_143708) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "matchings", force: :cascade do |t|
     t.float "like_value"
@@ -24,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_11_23_142137) do
     t.index ["from_user_id"], name: "index_matchings_on_from_user_id"
     t.index ["to_user_id"], name: "index_matchings_on_to_user_id"
   end
+
 
   create_table "profiles", force: :cascade do |t|
     t.string "first_name"
@@ -72,12 +81,16 @@ ActiveRecord::Schema.define(version: 2021_11_23_142137) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "matchings", "users", column: "from_user_id"
   add_foreign_key "matchings", "users", column: "to_user_id"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "profiles", "matchings"
   add_foreign_key "profiles", "users"
   add_foreign_key "question_users", "questions"
