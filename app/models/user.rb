@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   has_many :messages, dependent: :destroy
   has_many :chatrooms, through: :messages
-  has_many :matching
+  has_many :matching, dependent: :destroy
 end
