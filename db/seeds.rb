@@ -1,6 +1,10 @@
+# User.destroy_all
+# Matching.destroy_all
+Profile.destroy_all
 Response.destroy_all
 Question.destroy_all
 
+p 'creating questions'
 question1 = Question.create(label: 'Vous êtes :', order: 1)
 question2 = Question.create(label: 'Vous êtes à la recherche de :', order: 2)
 question3 = Question.create(label: 'Vos amis dites de vous que vous êtes :', order: 3)
@@ -15,6 +19,8 @@ question11 = Question.create(label: "Êtes-vous intéressé par l'horoscope ?", 
 question12 = Question.create(label: 'Quels sont vos hobbies ?', order: 12)
 question13 = Question.create(label: 'Quels animaux préférez-vous ?', order: 13)
 
+
+p 'creating responses'
 response1 = Response.create(label: "Femme", question: question1)
 response2 = Response.create(label: "Homme", question: question1)
 response3 = Response.create(label: "Non-binaire", question: question1)
@@ -147,3 +153,41 @@ response116 = Response.create(label: "Oiseaux", question: question13)
 response117 = Response.create(label: "Poissons", question: question13)
 response118 = Response.create(label: "Reptiles", question: question13)
 response119 = Response.create(label: "Rongeurs", question: question13)
+
+
+p 'creating users'
+user1 = User.create!(email:"seb@gmail.com", password:"azertyuiop")
+user2 = User.create!(email: "victor@gmail.com", password: "qsdfghjklm")
+
+p 'creating profiles'
+profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28, bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉 Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon feeling et faire des shootings de dressing.")
+profile2 = Profile.create!(user_id: user2.id, first_name: "Victor", last_name: "Cai", age: 23, bio: "Hello, appelez-moi Zhijie.Si j'étais un temps je serai le plus que parfait ! A noter : je suis fan des ours 😏" )
+
+
+question_user1 = Question_user.create(user_id: user1.id, question_id: question1.id, response_id: response2.id)
+question_user2 = Question_user.create(user_id: user1.id, question_id: question2.id, response_id: response5.id)
+question_user3 = Question_user.create(user_id: user1.id, question_id: question3.id, response_id: response19.id)
+question_user4 = Question_user.create(user_id: user1.id, question_id: question4.id, response_id: response32.id)
+question_user5 = Question_user.create(user_id: user1.id, question_id: question5.id, response_id: response44.id)
+question_user6 = Question_user.create(user_id: user1.id, question_id: question6.id, response_id: response55.id)
+question_user7 = Question_user.create(user_id: user1.id, question_id: question7.id, response_id: response69.id)
+question_user8 = Question_user.create(user_id: user1.id, question_id: question8.id, response_id: response73.id)
+question_user9 = Question_user.create(user_id: user1.id, question_id: question9.id, response_id: response82.id)
+question_user10 = Question_user.create(user_id: user1.id, question_id: question10.id, response_id: response96.id)
+question_user11 = Question_user.create(user_id: user1.id, question_id: question11.id, response_id: response99.id)
+question_user12 = Question_user.create(user_id: user1.id, question_id: question12.id, response_id: response111.id)
+question_user13 = Question_user.create(user_id: user1.id, question_id: question13.id, response_id: response117.id)
+
+question_user1 = Question_user.create(user_id: user2.id, question_id: question1.id, response_id: response2.id)
+question_user2 = Question_user.create(user_id: user2.id, question_id: question2.id, response_id: response5.id)
+question_user3 = Question_user.create(user_id: user2.id, question_id: question3.id, response_id: response18.id)
+question_user4 = Question_user.create(user_id: user2.id, question_id: question4.id, response_id: response29.id)
+question_user5 = Question_user.create(user_id: user2.id, question_id: question5.id, response_id: response41.id)
+question_user6 = Question_user.create(user_id: user2.id, question_id: question6.id, response_id: response48.id)
+question_user7 = Question_user.create(user_id: user2.id, question_id: question7.id, response_id: response69.id)
+question_user8 = Question_user.create(user_id: user2.id, question_id: question8.id, response_id: response81.id)
+question_user9 = Question_user.create(user_id: user2.id, question_id: question9.id, response_id: response82.id)
+question_user10 = Question_user.create(user_id: user2.id, question_id: question10.id, response_id: response93.id)
+question_user11 = Question_user.create(user_id: user2.id, question_id: question11.id, response_id: response99.id)
+question_user12 = Question_user.create(user_id: user2.id, question_id: question12.id, response_id: response111.id)
+question_user13 = Question_user.create(user_id: user2.id, question_id: question13.id, response_id: response117.id)
