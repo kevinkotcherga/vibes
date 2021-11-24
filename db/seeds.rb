@@ -160,5 +160,5 @@ user1 = User.create!(email:"seb@gmail.com", password:"azertyuiop")
 user2 = User.create!(email: "victor@gmail.com", password: "qsdfghjklm")
 
 p 'creating profiles'
-profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28, bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉 Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon feeling et des shootings de dressing.")
+profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28, bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉 Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon feeling et faire des shootings de dressing.")
 profile2 = Profile.create!(user_id: user2.id, first_name: "Victor", last_name: "Cai", age: 23, bio: "Hello, appelez-moi Zhijie.Si j'étais un temps je serai le plus que parfait ! A noter : je suis fan des ours 😏" )
