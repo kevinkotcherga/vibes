@@ -1,6 +1,7 @@
 Response.destroy_all
 Question.destroy_all
 
+p 'creating questions'
 question1 = Question.create(label: 'Vous êtes :', order: 1)
 question2 = Question.create(label: 'Vous êtes à la recherche de :', order: 2)
 question3 = Question.create(label: 'Vos amis dites de vous que vous êtes :', order: 3)
@@ -15,6 +16,8 @@ question11 = Question.create(label: "Êtes-vous intéressé par l'horoscope ?", 
 question12 = Question.create(label: 'Quels sont vos hobbies ?', order: 12)
 question13 = Question.create(label: 'Quels animaux préférez-vous ?', order: 13)
 
+
+p 'creating responses'
 response1 = Response.create(label: "Femme", question: question1)
 response2 = Response.create(label: "Homme", question: question1)
 response3 = Response.create(label: "Non-binaire", question: question1)
@@ -148,6 +151,10 @@ response117 = Response.create(label: "Poissons", question: question13)
 response118 = Response.create(label: "Reptiles", question: question13)
 response119 = Response.create(label: "Rongeurs", question: question13)
 
-user1 = Profile.create(first_name: "Sébastien", last_name: "Techy", birth_date: )
-user2 =
-user3 =
+
+p 'creating users'
+user1 = User.create(email:"seb@gmail.com", password:"azertyuiop")
+# user2 =
+
+p 'creating profiles'
+profile1 = Profile.create(user_id: user1.id, last_name:"Saunier", first_name: "Seb", age: 30, bio: "COUCOU")
