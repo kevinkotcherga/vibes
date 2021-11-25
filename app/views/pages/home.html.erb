@@ -2,7 +2,7 @@
   <div class="container">
     <%= image_tag("logo.png", class:'logo_homepage')%>
     <p>Tu es plus qu’une photo. Tu as des histoires à raconter et des passions à partager.</p>
-        <%= link_to "Inscription", "#", class: "btn btn-gradient" %>
-        <%= link_to "Connexion", "#", class: "btn btn-gradient2" %>
+        <%= link_to "Inscription", new_user_session_path, class: "btn btn-gradient" %>
+        <%= link_to "Connexion", user_session_path, class: "btn btn-gradient2" %>
   </div>
 </div>
