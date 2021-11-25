@@ -6,6 +6,20 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
 
+  get '/matches/launch', to: 'matches#launch'
+  # get '/matches/:id/result', to: 'matches#result'
+  # get '/matches/:id/reveal', to: 'matches#reveal'
+  # get '/matches/:id/picture', to: 'matches#picture'
+  get '/matches/activity', to: 'matches#activity'
+  resources :matches do
+    member do
+      get :result
+      get :reveal
+      get :picture
+    end
+  end
+
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # resources :profiles, only: [:new, :create]
   resource :personality_questionnaire, only: [:new, :create]
 end
