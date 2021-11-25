@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   get '/matched_users', to: 'matches#matched_users'
 
   resources :matches do
-
     member do
       get :result
       get :reveal

@@ -18,4 +18,9 @@ class User < ApplicationRecord
         .where(responses: { id: responses.pluck(:id) })
         .where.not(users: { id: id }).distinct
   end
+
+  def pick_user
+    users = matched_users
+    users.sample
+  end
 end

@@ -6,9 +6,14 @@ class MatchesController < ApplicationController
   end
 
   def matched_users
-    user_search = User.joins(:responses).where(responses: { id: responses.pluck(:id) }).where.not(users: { id: id }).distinct
-    matching = Matching.create(from_user: current_user, to_user: user_search)
-    redirect_to result_match_path(matching)
+    matching_user = current_user.pick_user
+    matching = Matching.create(from_user: current_user, to_user: matching_user)
+
+    if matching.valid?
+      redirect_to result_match_path(matching)
+    else
+      redirect_to matches_launch_path
+    end
   end
 
   def reveal
