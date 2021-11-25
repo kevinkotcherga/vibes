@@ -3,6 +3,8 @@ class MatchesController < ApplicationController
   end
 
   def result
+    @user = User.find(Matching.find(params[:id]).to_user_id)
+    @chatroom = Chatroom.create(name: "general")
   end
 
   def matched_users
