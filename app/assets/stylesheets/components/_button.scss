@@ -8,6 +8,7 @@
   border: 1px solid #0F60C4;
   margin-top: 5%;
   margin-bottom: 5%;
+  text-decoration: none;
 }
 
 .btn-gradient:hover {
@@ -27,4 +28,39 @@
 
 .btn-gradient2:hover {
   background: rgb(238, 236, 236);
+}
+
+
+.btn-reveal-oui {
+  color: black;
+  padding: 8px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: white;
+  transition: background 0.3s ease;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  margin-top: 3%;
+}
+
+.btn-reveal-oui:hover {
+  background: rgb(116, 33, 248);
+  color:white
+}
+
+.btn-reveal-non {
+  color: white;
+  padding: 8px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: rgb(235, 48, 48);
+  transition: background 0.3s ease;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  margin-top: 3%;
+}
+
+.btn-reveal-non:hover {
+  background: rgb(255, 255, 255);
+  color: black
 }

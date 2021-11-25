@@ -1,6 +1,6 @@
-<h1>Nom du partenaire </h1>
+<h1>Nom du partenaire<%= @user.profile.first_name %></h1>
 <h2>Age du partenaire</h2>
 
 <p>Score de matching en %</p>
 
-<%# <%= link_to "Commencer la discution", chatroom_path %> %>
+<%= link_to "Commencer la discution", chatroom_path(@chatroom) %>

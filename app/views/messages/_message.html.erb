@@ -1,7 +1,7 @@
 
 <div class="d-flex flex-column<% if message.user.id == first_user %> align-items-start <% else %> align-items-end <% end %>" id="message-<%= message.id %>">
   <small>
-    <strong><%= message.user.first_name %></strong>
+    <strong><%= message.user.profile.first_name %></strong>
   </small>
   <div class="rounded m-2 px-3 bg-primary">
     <p><%= message.content %></p>

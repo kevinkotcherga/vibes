@@ -3,13 +3,19 @@ class MatchesController < ApplicationController
   end
 
   def result
+    @user = User.find(Matching.find(params[:id]).to_user_id)
+    @chatroom = Chatroom.create(name: "general")
   end
 
   def matched_users
-    User.joins(:responses)
-        .where(responses: { id: responses.pluck(:id) })
-        .where.not(users: { id: id }).distinct
-    redirect_to result_match_path(@matches)
+    matching_user = current_user.pick_user
+    matching = Matching.create(from_user: current_user, to_user: matching_user)
+
+    if matching.valid?
+      redirect_to result_match_path(matching)
+    else
+      redirect_to matches_launch_path
+    end
   end
 
   def reveal

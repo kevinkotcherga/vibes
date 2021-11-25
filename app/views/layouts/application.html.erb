@@ -12,8 +12,11 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div style="min-height: 100vh;">
+      <%= render "shared/navbar" unless action_name == "home" %>
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+      <%= render 'shared/footer' unless action_name == "home" %>
+    </div>
   </body>
 </html>
