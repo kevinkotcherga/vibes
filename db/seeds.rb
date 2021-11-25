@@ -1,5 +1,6 @@
 Profile.destroy_all
 Matching.destroy_all
+QuestionUser.destroy_all
 Response.destroy_all
 Question.destroy_all
 User.destroy_all

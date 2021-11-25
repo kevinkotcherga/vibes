@@ -1,14 +1,20 @@
 <h1>Questionnaire de personnalité</h1>
 
-<%= simple_form_for @user, url: personality_questionnaire_path, method: :post do |f| %>
-  <% @questions.each do |question|%>
-    <h2>
-      <%= question.label %>
-    </h2>
-    <% question.responses.each do |response| %>
-      <%= check_box_tag 'user[response_ids][]', response.id, false, id: "response-#{response.id}" %>
-      <%= label_tag "response-#{response.id}", response.label %>
+<div class="container">
+  <%= simple_form_for @user, url: personality_questionnaire_path, method: :post do |f| %>
+    <div class="wrapper-questionnaire">
+    <% @questions.each do |question|%>
+      <div class="container-questionnaire">
+        <h2>
+          <%= question.label %>
+        </h2>
+      <% question.responses.each do |response| %>
+          <%= check_box_tag 'user[response_ids][]', response.id, false, id: "response-#{response.id}" %>
+          <%= label_tag "response-#{response.id}", response.label %>
+      <% end %>
+      </div>
     <% end %>
+    <%= f.submit "Valider", class: "btn btn-primary" %>
+    </div>
   <% end %>
-  <%= f.submit "Go", class: "btn btn-primary" %>
-<% end %>
+</div>
