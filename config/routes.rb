@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   # get '/matches/:id/reveal', to: 'matches#reveal'
   # get '/matches/:id/picture', to: 'matches#picture'
   get '/matches/activity', to: 'matches#activity'
+  get '/matched_users', to: 'matches#matched_users'
+
   resources :matches do
+
     member do
       get :result
       get :reveal
