@@ -9,14 +9,14 @@
           <%= question.label %>
         </h2>
         <div class="container-responses">
-            <div class="container-input">
-          <% question.responses.each do |response| %>
+          <div class="container-input">
+            <% question.responses.each do |response| %>
               <div class= "checkbox-transparent">
                 <%= check_box_tag 'user[response_ids][]', response.id, false, id: "response-#{response.id}" %>
               </div>
               <%= label_tag "response-#{response.id}", response.label %>
-          <% end %>
-            </div>
+            <% end %>
+          </div>
         </div>
       </div>
     <% end %>
