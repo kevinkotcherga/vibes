@@ -7,3 +7,33 @@
   align-items: center;
   text-align: center;
 }
+
+.container-reveal {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url(background-neon.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 320px;
+  background-position: center;
+  color: white;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.container-global-reveal {
+  background-color: black;
+  margin-top: 20%;
+}

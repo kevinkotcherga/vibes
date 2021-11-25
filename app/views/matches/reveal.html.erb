@@ -1,6 +1,13 @@
-<h1>Les 48h sont terminés !</h1>
+<div class="container-global-reveal">
+  <%= image_tag("logo.png", class:'logo_reveal')%>
+  <div class="container-reveal">
+    <div class="content">
+      <h3 class="">Cela fait 48h que vous discutez !</h3>
 
-<p>Voulez-vous réveler vos photos ? </p>
+      <p>Voulez-vous réveler vos photos ? </p>
 
-<%= link_to "Oui", picture_match_path %>
-<%= link_to "Non", matches_activity_path %>
+      <%= link_to "Oui", picture_match_path, class: "btn-reveal-oui" %>
+      <%= link_to "Non", matches_activity_path, class: "btn-reveal-non" %>
+    </div>
+  </div>
+</div>
