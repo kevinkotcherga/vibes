@@ -1,4 +1,4 @@
-<h1>Bonjour</h1>
+<h1>Bonjour <%= current_user.profile.first_name %></h1>
 <p>Prêt à trouver l'amour ?</p>
 
 <%= link_to "Continuer", matched_users_path %>
