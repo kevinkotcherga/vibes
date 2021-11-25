@@ -1,0 +1,18 @@
+.container-questionnaire {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+  border-radius: 20px;
+  flex: none;
+  scroll-snap-align: center;
+}
+
+.wrapper-questionnaire {
+  background-color: tomato;
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+}
