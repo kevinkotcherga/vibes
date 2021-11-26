@@ -15,9 +15,13 @@
 
 .phrase-accroche2 {
   font-size: 1.3rem;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .container-paragraphe {
-  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
