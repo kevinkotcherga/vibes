@@ -25,7 +25,7 @@
 }
 
 .wrapper-questionnaire {
-  height: 70vh;
+  height: 60vh;
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
@@ -57,7 +57,7 @@
   margin-right: 20px;
 }
 
-.checkbox-transparent {
+.checkbox-transparent{
   position: absolute;
   transform: scale(0);
 }
