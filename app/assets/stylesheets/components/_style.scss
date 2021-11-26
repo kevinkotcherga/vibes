@@ -1,3 +1,10 @@
-ul {
-  list-style-type: none;
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+.body {
+  background-color: #fefefe;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+h1, h2, p {
+font-family: 'Balsamiq Sans', cursive;
 }

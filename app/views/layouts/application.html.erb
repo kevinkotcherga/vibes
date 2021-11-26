@@ -11,7 +11,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body class="body">
     <div style="min-height: 100vh; overflow: hidden;">
       <%= render "shared/navbar" unless action_name == "home" %>
       <%= yield %>
