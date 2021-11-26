@@ -1,6 +1,8 @@
-<h1>Nom du partenaire<%= @user.profile.first_name %></h1>
-<h2>Age du partenaire</h2>
+<div class="container">
+<h1 class="display-1"><%= @user.profile.first_name %></h1>
+<h2 class="display-4"><%= @user.profile.age %> ans</h2>
 
-<p>Score de matching en %</p>
+<p class="display-6">93 % de matching !</p>
 
-<%= link_to "Commencer la discution", chatroom_path(@chatroom) %>
+<%= link_to "Commencer la discution", chatroom_path(@chatroom), class: "btn btn-gradient w-70" %>
+</div>
