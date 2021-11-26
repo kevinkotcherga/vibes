@@ -8,7 +8,7 @@
 .container-questionnaire {
   height: 100%;
   width: 94%;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(rgba(34, 45, 189, 0.8) 50%, rgba(249, 51, 206, 0.8));
   border-radius: 20px;
   flex: none;
   scroll-snap-align: center;
@@ -50,7 +50,7 @@
   font-weight: bold;
   padding: 8px 24px;
   border-radius: 30px;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(rgba(34, 45, 189, 0.8) 50%, rgba(249, 51, 206, 0.8));
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
   margin-top: 55%;
