@@ -20,7 +20,6 @@ question11 = Question.create(label: "Suis-tu l'horoscope ?", order: 11)
 question12 = Question.create(label: 'Quels sont tes hobbies ?', order: 12)
 question13 = Question.create(label: 'Tes animaux préférés ?', order: 13)
 
-
 p 'creating responses'
 response1 = Response.create(label: "Femme", question: question1)
 response2 = Response.create(label: "Homme", question: question1)
@@ -164,6 +163,7 @@ p 'creating profiles'
 profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28, bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉 Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon feeling et faire des shootings de dressing.")
 profile2 = Profile.create!(user_id: user2.id, first_name: "Victor", last_name: "Cai", age: 23, bio: "Hello, appelez-moi Zhijie. Si j'étais un temps je serai le plus que parfait ! A noter : je suis fan des ours 😏" )
 
+p 'creating question_user'
 question_user1 = QuestionUser.create(user_id: user1.id, question_id: question1.id, response_id: response2.id)
 question_user2 = QuestionUser.create(user_id: user1.id, question_id: question2.id, response_id: response5.id)
 question_user3 = QuestionUser.create(user_id: user1.id, question_id: question3.id, response_id: response19.id)
