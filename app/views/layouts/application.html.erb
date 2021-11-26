@@ -12,12 +12,11 @@
   </head>
 
   <body>
-    <div style="min-height: 100vh;">
+    <div style="min-height: 100vh; overflow: hidden;">
       <%= render "shared/navbar" unless action_name == "home" %>
-      <%= render 'shared/flashes' %>
       <%= yield %>
-      <%#= render 'shared/footer' unless action_name == "home" || "users/sign_in" %>
-      <%= render 'shared/footer' %>
+      <%#= raise %>
+      <%= render 'shared/footer' unless action_name == "home" || (action_name == "new" && controller_name == "sessions") %>
     </div>
   </body>
 </html>
