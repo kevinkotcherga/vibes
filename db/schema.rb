@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_135339) do
+ActiveRecord::Schema.define(version: 2021_11_29_165800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2021_11_29_135339) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "matching_id"
+    t.index ["matching_id"], name: "index_chatrooms_on_matching_id"
   end
 
   create_table "matchings", force: :cascade do |t|
@@ -48,8 +50,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_135339) do
     t.bigint "from_user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "chatroom_id"
-    t.index ["chatroom_id"], name: "index_matchings_on_chatroom_id"
+    t.string "status", default: "pending"
     t.index ["from_user_id"], name: "index_matchings_on_from_user_id"
     t.index ["to_user_id"], name: "index_matchings_on_to_user_id"
   end
@@ -116,7 +117,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_135339) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "matchings", "chatrooms"
+  add_foreign_key "chatrooms", "matchings"
   add_foreign_key "matchings", "users", column: "from_user_id"
   add_foreign_key "matchings", "users", column: "to_user_id"
   add_foreign_key "messages", "chatrooms"
