@@ -2,7 +2,7 @@
 <div class="container">
   <h1> Voici la photo de votre partenaire ! </h1>
   <br>
-  <%= cl_image_tag current_user.profile.photo.key, class:"activity_image1"%>
+  <%= cl_image_tag @user.profile.photo.key, class:"activity_image1"%>
   <br>
   <%= link_to "Continuer", matches_activity_path, class: "btn-gradient" %>
 </div>
