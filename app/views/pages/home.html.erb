@@ -1,12 +1,14 @@
 <div id="home">
-    <div class="container-text">
-    <%= image_tag("logo.png", class:'logo_homepage')%>
-      <div class="container-paragraphe">
+    <div class="container-homepage">
+      <%= image_tag("logo-dynam.gif", class:'logo_homepage')%>
+      <div class="content-homepage">
         <p class="phrase-accroche">Tu es plus qu’une photo.</p>
-        <p class="phrase-accroche2">Tu as des histoires à raconter et des passions à partager.</p>
+        <br>
+        <p class="phrase-accroche2">Tu as des <span style="color:#9D40FF">histoires</span> à raconter et des <span style="color:#9D40FF">passions</span> à partager.</p>
+        <br>
+        <br>
+        <%= link_to "Connexion", user_session_path, class: "btn btn-connexion w-50" %>
+        <%= link_to "Inscription", new_user_session_path, class: "btn btn-principal w-50" %>
       </div>
-      <%= link_to "Inscription", new_user_session_path, class: "btn btn-gradient w-50" %>
-      <%= link_to "Connexion", user_session_path, class: "btn btn-gradient2 w-50" %>
     </div>
-  </div>
 </div>
