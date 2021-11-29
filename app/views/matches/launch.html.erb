@@ -1,10 +1,11 @@
 <div class="container text-white">
-  <h1>Bonjour <%= current_user.profile.first_name %></h1>
-
-  <%= cl_image_tag current_user.profile.photo.key, class:"activity_image1"%>
-
-  <h3>Prêt à trouver l'amour ?</h3>
-
-  <%= link_to "Continuer", matched_users_path, class:"btn-principal" %>
+  <div class='card margin-top'>
+    <h1>Bonjour <%= current_user.profile.first_name %></h1>
+    <br>
+    <%= cl_image_tag current_user.profile.photo.key, class:"activity_image1"%>
+  </div>
+  <div class="card mt-4">
+    <h3>Prêt à trouver l'amour ?</h3>
+    <%= link_to "Continuer", matched_users_path, class:"btn-principal" %>
   </div>
 </div>
