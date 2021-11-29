@@ -1,32 +1,30 @@
-.btn-gradient {
+.btn-principal {
   color: white;
   padding: 8px 24px;
   border-radius: 30px;
   font-weight: bold;
-  background: linear-gradient(rgba(34, 45, 189, 0.8) 50%, rgba(249, 51, 206, 0.8));
+  background: linear-gradient(#47047b 20%, #8c088d);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
   margin-top: 5%;
   margin-bottom: 5%;
   text-decoration: none;
+  border: 1px solid #52034f;
 }
 
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
+.btn-principal:hover {
+  background: rgb(238, 236, 236);
+}
+
+.btn-connexion {
   color: white;
-}
-
-.btn-gradient2 {
-  color: black;
   padding: 8px 24px;
   border-radius: 30px;
   font-weight: bold;
-  background-color: white;
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #ffffff;
 }
 
-.btn-gradient2:hover {
+.btn-connexion:hover {
   background: rgb(238, 236, 236);
 }
 
