@@ -1,4 +1,4 @@
 class Chatroom < ApplicationRecord
   has_many :messages
-  has_one :matching
+  belongs_to :matching
 end
