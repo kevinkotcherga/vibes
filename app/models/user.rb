@@ -17,7 +17,6 @@ class User < ApplicationRecord
     User.joins(:responses)
         .where(responses: { id: responses.pluck(:id) })
         .where.not(users: { id: id }).distinct
-
   end
 
   def pick_user

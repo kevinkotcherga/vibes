@@ -5,6 +5,8 @@ Response.destroy_all
 Question.destroy_all
 User.destroy_all
 
+require "open-uri"
+
 p 'creating questions'
 question1 = Question.create(label: 'Tu es :', order: 1)
 question2 = Question.create(label: 'Tu recherches :', order: 2)
@@ -155,12 +157,21 @@ response72 = Response.create(label: "Aucun", question: question7)
 # response119 = Response.create(label: "Rongeurs", question: question13)
 
 p 'creating users'
-user1 = User.create!(email:"seb@gmail.com", password:"azertyuiop")
+user1 = User.create!(email: "seb@gmail.com", password:"azertyuiop")
 user2 = User.create!(email: "mathilde@gmail.com", password: "qsdfghjklm")
 
 p 'creating profiles'
-profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28, bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉 Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon feeling et faire des shootings de dressing.")
-profile2 = Profile.create!(user_id: user2.id, first_name: "Mathilde", last_name: "Cai", age: 27, bio: "Hello. Je suis passioné par le football")
+profile1 = Profile.create!(user_id: user1.id, first_name: "Sebastien", last_name: "Techy", age: 28,
+                           bio: "Salut, je vis à Paris. J'adore la photographie et les dauphins. 😉
+                           Je cherche avant tout à rencontrer quelqu'un avec qui je pourrais avoir un bon
+                           feeling et faire des shootings de dressing.")
+file2 = URI.open('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w')
+profile1.photo.attach(io: file2, filename: 'picture-man.jpg', content_type: 'image/jpg')
+
+profile2 = Profile.create!(user_id: user2.id, first_name: "Mathilde", last_name: "Cai", age: 27,
+                           bio: "Hello. Je suis passioné par le football.")
+file1 = URI.open('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
+profile2.photo.attach(io: file1, filename: 'picture-woman.jpg', content_type: 'image/jpg')
 
 p 'creating question_user'
 question_user1 = QuestionUser.create(user_id: user1.id, question_id: question1.id, response_id: response2.id)
