@@ -1,9 +1,12 @@
 <div class="container">
-<h1 class="display-1"><%= @user.profile.first_name %></h1>
-<h2 class="display-4"><%= @user.profile.age %> ans</h2>
-
-<p class="display-6">93 % de matching !</p>
-
-<%= link_to "Discutez", chatroom_path(@matching.chatroom), class: "btn btn-principal w-70" %>
-
+  <h1 id="ton-match">Ton match !</h1>
+    <div class="contenant">
+      <%= image_tag("vibes-coeur.gif", class:'coeur_vibes')%>
+      <p class="coeur-pourcent w-70">93 %</p>
+    </div>
+  <div class="hline"></div>
+  <br>
+  <h1 class="first_name"><%= @user.profile.first_name %></h1>
+  <h2 class="display-4"><%= @user.profile.age %> ans</h2>
+  <%= link_to "Discutez", chatroom_path(@matching.chatroom), class: "btn btn-principal w-70" %>
 </div>

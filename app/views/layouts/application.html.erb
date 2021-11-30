@@ -13,7 +13,7 @@
 
   <body class="body">
     <div style="min-height: 100vh; overflow: hidden;">
-      <%= render "shared/navbar" unless action_name == "home" %>
+      <%= render "shared/navbar" unless action_name == "home" || ( action_name== "result" )%>
       <%= yield %>
       <%= render 'shared/footer' unless action_name == "home" || (action_name == "new" && controller_name == "sessions") || (action_name == "new" && controller_name == "personality_questionnaires") %>
     </div>
