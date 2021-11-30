@@ -175,7 +175,7 @@ profile2.photo.attach(io: file1, filename: 'picture-woman.jpg', content_type: 'i
 
 p 'creating question_user'
 question_user1 = QuestionUser.create(user_id: user1.id, question_id: question1.id, response_id: response2.id)
-question_user2 = QuestionUser.create(user_id: user1.id, question_id: question2.id, response_id: response5.id)
+question_user2 = QuestionUser.create(user_id: user1.id, question_id: question2.id, response_id: response4.id)
 question_user3 = QuestionUser.create(user_id: user1.id, question_id: question3.id, response_id: response19.id)
 question_user4 = QuestionUser.create(user_id: user1.id, question_id: question4.id, response_id: response32.id)
 question_user5 = QuestionUser.create(user_id: user1.id, question_id: question5.id, response_id: response44.id)
@@ -188,7 +188,7 @@ question_user7 = QuestionUser.create(user_id: user1.id, question_id: question7.i
 # question_user12 = QuestionUser.create(user_id: user1.id, question_id: question12.id, response_id: response111.id)
 # question_user13 = QuestionUser.create(user_id: user1.id, question_id: question13.id, response_id: response117.id)
 
-question_user1 = QuestionUser.create(user_id: user2.id, question_id: question1.id, response_id: response2.id)
+question_user1 = QuestionUser.create(user_id: user2.id, question_id: question1.id, response_id: response1.id)
 question_user2 = QuestionUser.create(user_id: user2.id, question_id: question2.id, response_id: response5.id)
 question_user3 = QuestionUser.create(user_id: user2.id, question_id: question3.id, response_id: response19.id)
 question_user4 = QuestionUser.create(user_id: user2.id, question_id: question4.id, response_id: response29.id)
