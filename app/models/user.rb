@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   has_many :messages, dependent: :destroy
   has_many :chatrooms, through: :matchings
-  has_many :matchings, dependent: :destroy
+  has_many :matchings, foreign_key: "from_user_id", dependent: :destroy
 
   has_one :profile, dependent: :destroy
 
