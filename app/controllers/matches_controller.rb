@@ -32,6 +32,7 @@ class MatchesController < ApplicationController
   end
 
   def picture
+    @matching = Matching.find(params[:id])
     @user = User.find(Matching.find(params[:id]).to_user_id)
   end
 

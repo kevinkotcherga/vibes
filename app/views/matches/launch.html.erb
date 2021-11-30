@@ -5,7 +5,7 @@
     <%= cl_image_tag current_user.profile.photo.key, class:"activity_image1"%>
   </div>
   <div class="card mt-4">
-    <h3>Prêt à trouver l'amour ?</h3>
+    <h3 class="ready-text">Prêt(e) à trouver l'amour ?</h3>
     <% if @matching %>
       <%= link_to "Discuter", chatroom_path(@matching.chatroom) , class:"btn-principal" %>
     <% else %>
