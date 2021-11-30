@@ -1,4 +1,32 @@
 .form-control {
-  width: 60vw;
+  width: 90%;
   border-radius: 20px;
+  margin: 0 auto;
+}
+
+.container-input{
+  padding: 20px 0px 10px 0px;
+  position: fixed;
+  bottom: 6.5vh;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #070118;
+}
+
+.messages {
+  margin-bottom: 80px;
+  color: white;
+}
+
+.rounded-message {
+  border-radius: 12px;
+}
+
+.bg-primary1{
+  background-color: purple;
+}
+
+.bg-secondary2{
+  background-color: none;
+  border: white 1px solid;
 }
