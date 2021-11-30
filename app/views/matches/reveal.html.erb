@@ -1,18 +1,19 @@
 <br>
 <br>
-<div class="container-chrono">
-  <h1> Dring Dring, c'est l'heure !</h1>
-  <img src="https://img.icons8.com/ios-filled/100/000000/stopwatch.png" class="chrono"/>
-</div>
 <br>
-  <div class="container-reveal">
+<div class="container">
+  <div class="card">
     <div class="content">
-      <h3 class="">Cela fait 48h que vous discutez !</h3>
-
-      <p>Voulez-vous réveler vos photos ? </p>
+      <h1>C'est l'heure !</h1>
+      <h1>48 h</h1>
+      <%= image_tag("time-limit.png", :alt => "48h") %>
+      <br>
+      <h3>Voulez-vous réveler vos photos ? </h3>
+      <br>
 
       <%= link_to "Oui", picture_match_path, class: "btn-reveal-oui" %>
       <%= link_to "Non", matches_activity_path, class: "btn-reveal-non" %>
     </div>
   </div>
+</div>
 </div>
