@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" data-controller="more-info">
   <h1 id="ton-match">Ton match !</h1>
     <div class="contenant">
       <%= image_tag("vibes-coeur.gif", class:'coeur_vibes')%>
@@ -8,15 +8,24 @@
   <br>
   <h1 class="first_name"><%= @user.profile.first_name %></h1>
   <h2 class="display-4"><%= @user.profile.age %> ans</h2>
-  <%= link_to "Discutez", chatroom_path(@matching.chatroom), class: "btn btn-principal w-70" %>
-  <div>
-    <ul>
+
+  <div class="savoir-plus" data-action="click->more-info#scrollToTop">
+  <p>En savoir plus</p>
+  <%= image_tag "outline_expand_more_white_24dp.png" %>
+  </div>
+
+  <p class="title-commun" data-more-info-target="title">Vos points communs :</p>
+
+  <div class="card">
+    <ul class="ul-card-result">
       <% @responses_name.each do |response|%>
-        <li>
+        <li class="li-card-result">
           <%= response.question.label %>
           <%= response.label %>
         </li>
       <% end %>
     </ul>
   </div>
+
+  <%= link_to "Discutez", chatroom_path(@matching.chatroom), class: "btn btn-principal w-70 margin-btn" %>
 </div>
