@@ -1,23 +1,42 @@
-<br>
 <div class="container">
-  <h1>Votre rencontre</h1>
-  <h2>Quelques idées d'activités :</h2>
+  <h1>Quelques idées d'activités :</h1>
    <br>
-  <h3>Un verre ?</h3>
-    <%= image_tag("cocobar.png", class:"activity_image") %>
-   <br>
-  <h3>Un cinéma ?</h3>
-    <%= image_tag("cinema.jpg", class:"activity_image") %>
-   <br>
-  <h3>Un diner en tête à tête ?</h3>
-    <%= image_tag("surpriz.jpg", class:"activity_image") %>
-    <br>
-  <h3>Un musée ?</h3>
-    <%= image_tag("musee.jpg", class:"activity_image") %>
-     <br>
-  <h3>Une balade ?</h3>
-    <%= image_tag("balade.jpg", class:"activity_image") %>
-  <br>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Un verre ?</h2>
+      <%= link_to image_tag("cocobar.png", class:"activity_image"), 'https://www.timeout.fr/paris', rel: 'nofollow', target: '_blank' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Un cinéma ?</h2>
+      <%= link_to image_tag("cinema.jpg", class:"activity_image"), 'https://www.allocine.fr/', rel: 'nofollow', target: '_blank' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Un diner en tête à tête ?</h2>
+      <%= link_to image_tag("surpriz.jpg", class:"activity_image"), 'https://www.thefork.fr/', rel: 'nofollow', target: '_blank' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Un musée ?</h2>
+      <%= link_to image_tag("musee.jpg", class:"activity_image"), 'https://www.tripadvisor.fr/', rel: 'nofollow', target: '_blank' %>
+    </div>
+  </div>
+
+  <%# <div class="row">
+    <div class="col-sm-6">
+      <h2>Une balade ?</h2>
+      <%= image_tag("balade.jpg", class:"activity_image") %>
+    <%# </div> %>
+  </div>
+
   <br>
   <%= link_to "Retour", class: "btn-gradient" %>
 </div>
