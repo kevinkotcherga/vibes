@@ -9,7 +9,7 @@
     <% if @matching %>
       <%= link_to "Discuter", chatroom_path(@matching.chatroom) , class:"btn-principal" %>
     <% else %>
-      <%= link_to "Bonsoir", matched_users_path, class:"btn-principal" %>
+      <%= link_to "C'est parti !", matched_users_path, class:"btn-principal" %>
     <% end %>
   </div>
 </div>
