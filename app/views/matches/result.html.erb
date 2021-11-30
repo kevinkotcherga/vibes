@@ -9,4 +9,14 @@
   <h1 class="first_name"><%= @user.profile.first_name %></h1>
   <h2 class="display-4"><%= @user.profile.age %> ans</h2>
   <%= link_to "Discutez", chatroom_path(@matching.chatroom), class: "btn btn-principal w-70" %>
+  <div>
+    <ul>
+      <% @responses_name.each do |response|%>
+        <li>
+          <%= response.question.label %>
+          <%= response.label %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

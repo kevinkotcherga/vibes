@@ -11,6 +11,9 @@ class MatchesController < ApplicationController
   def result
     @matching = Matching.find(params[:id])
     @user = User.find(@matching.to_user_id)
+    my_responses = current_user.responses
+    lover_responses = @user.responses
+    @responses_name = (my_responses & lover_responses)
   end
 
   def matched_users
