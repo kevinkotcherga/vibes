@@ -17,15 +17,14 @@
   margin: 0 15px;
   margin-top:15px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   h2 {
     color: white;
     font-weight: bold;
-    margin-top: 35px;
     margin-bottom: 35px;
     padding: 0 12px;
     }
-
 }
 
 .wrapper-questionnaire {
@@ -37,7 +36,7 @@
   scroll-snap-type: x mandatory;
 }
 
-.container-input {
+.container-answer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -54,10 +53,9 @@
   font-weight: bold;
   padding: 8px 24px;
   border-radius: 30px;
-  background: linear-gradient(rgba(34, 45, 189, 0.8) 50%, rgba(249, 51, 206, 0.8));
+  background: black;
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
-  margin-top: 55%;
   margin-right: 20px;
 }
 
@@ -67,21 +65,26 @@
 }
 
 .checkbox-transparent + label {
-  cursor: pointer;
-  display: inline-block;
-  color:  black;
-  padding: 8px 24px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: white;
-  transition: background 0.3s ease;
-  border: 1px solid rgba(31, 31, 233, 0.918);
-  border-radius: 20px;
-  margin-bottom: 10px;
-  margin-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: black;
+    transition: background 0.3s ease;
+    border: 1px solid rgba(31, 31, 233, 0.918);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: black;
+    border: 2px solid black;
+    background: none;
+    border-radius: 17px;
+    background-color: white;
 }
 
 .checkbox-transparent:checked + label {
-  background-color: black;
-  color: white;
+    background-color: #7f2ca9;
+    color: white;
 }

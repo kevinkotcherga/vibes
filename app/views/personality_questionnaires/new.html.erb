@@ -1,13 +1,13 @@
 <div class="container">
   <%= simple_form_for @user, url: personality_questionnaire_path, method: :post do |f| %>
     <div class="wrapper-questionnaire">
-    <% @questions.each do |question|%>
+    <% @questions.each_with_index do |question, index|%>
       <div class="container-questionnaire">
         <h2>
           <%= question.label %>
         </h2>
         <div class="container-responses">
-          <div class="container-input">
+          <div class="container-answer">
             <% question.responses.each do |response| %>
               <div>
                 <%= check_box_tag 'user[response_ids][]', response.id, false, id: "response-#{response.id}", class: "checkbox-transparent" %>
@@ -15,10 +15,12 @@
               </div>
             <% end %>
           </div>
+        <% if index == @questions.size - 1 %>
+          <%= link_to "Valider", matches_launch_path, class: "btn btn-principal container-submit" %>
+        <% end %>
         </div>
       </div>
     <% end %>
-    <%= link_to "Valider", matches_launch_path, class: "btn btn-principal container-submit" %>
     </div>
   <% end %>
 </div>
