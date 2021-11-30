@@ -1,5 +1,11 @@
 class MatchesController < ApplicationController
   def launch
+    @create_match = Matching.new
+    if Matching.exists?(from_user_id: current_user.id)
+      @matching = Matching.find_by(from_user_id: current_user.id)
+    elsif Matching.exists?(to_user_id: current_user.id)
+      @matching = Matching.find_by(to_user_id: current_user.id)
+    end
   end
 
   def result
@@ -9,9 +15,10 @@ class MatchesController < ApplicationController
 
   def matched_users
     matching_user = current_user.pick_user
-    @matching = Matching.create(from_user: current_user, to_user: matching_user, chatroom: Chatroom.create)
+    @matching = Matching.new(from_user: current_user, to_user: matching_user, chatroom: Chatroom.create)
 
-    if @matching.valid?
+    if @matching.save
+      @matching.status = "valid"
       redirect_to result_match_path(@matching)
     else
       redirect_to matches_launch_path

@@ -6,6 +6,10 @@
   </div>
   <div class="card mt-4">
     <h3>Prêt à trouver l'amour ?</h3>
-    <%= link_to "Continuer", matched_users_path, class:"btn-principal" %>
+    <% if @matching %>
+      <%= link_to "Discuter", chatroom_path(@matching.chatroom) , class:"btn-principal" %>
+    <% else %>
+      <%= link_to "Bonsoir", matched_users_path, class:"btn-principal" %>
+    <% end %>
   </div>
 </div>
