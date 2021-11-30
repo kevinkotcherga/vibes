@@ -190,10 +190,10 @@ question_user7 = QuestionUser.create(user_id: user1.id, question_id: question7.i
 
 question_user1 = QuestionUser.create(user_id: user2.id, question_id: question1.id, response_id: response2.id)
 question_user2 = QuestionUser.create(user_id: user2.id, question_id: question2.id, response_id: response5.id)
-question_user3 = QuestionUser.create(user_id: user2.id, question_id: question3.id, response_id: response18.id)
+question_user3 = QuestionUser.create(user_id: user2.id, question_id: question3.id, response_id: response19.id)
 question_user4 = QuestionUser.create(user_id: user2.id, question_id: question4.id, response_id: response29.id)
-question_user5 = QuestionUser.create(user_id: user2.id, question_id: question5.id, response_id: response41.id)
-question_user6 = QuestionUser.create(user_id: user2.id, question_id: question6.id, response_id: response48.id)
+question_user5 = QuestionUser.create(user_id: user2.id, question_id: question5.id, response_id: response44.id)
+question_user6 = QuestionUser.create(user_id: user2.id, question_id: question6.id, response_id: response55.id)
 question_user7 = QuestionUser.create(user_id: user2.id, question_id: question7.id, response_id: response69.id)
 # question_user8 = QuestionUser.create(user_id: user2.id, question_id: question8.id, response_id: response81.id)
 # question_user9 = QuestionUser.create(user_id: user2.id, question_id: question9.id, response_id: response82.id)
