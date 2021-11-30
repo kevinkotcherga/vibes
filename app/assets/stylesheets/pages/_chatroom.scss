@@ -14,8 +14,11 @@
 }
 
 .messages {
-  margin-bottom: 80px;
+  margin-bottom: 25px;
   color: white;
+  height: 60vh;
+  /* background: red; */
+  overflow-y: scroll;
 }
 
 .rounded-message {

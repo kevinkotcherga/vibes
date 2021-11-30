@@ -8,12 +8,12 @@
       <% end %>
     </div>
   </div>
-</div>
 
-<div class="container-input w-100">
-  <%= simple_form_for [@chatroom, @message], remote: true, html: { class: "w-100"} do |f| %>
-  <%= f.input :content, label: false, placeholder: "Type your message...#{@chatroom.name}", class: "w-100" %>
+  <%= simple_form_for [@chatroom, @message], remote: true do |f| %>
+  <%= f.input :content, label: false, placeholder: "Type your message...#{@chatroom.name}" %>
   <% end %>
-</div>
 
   <%= link_to "Continuer", reveal_match_path(@chatroom.matching.id), class: "btn btn-gradient2" %>
+
+
+</div>
