@@ -1,5 +1,5 @@
 class Matching < ApplicationRecord
   belongs_to :from_user, class_name: "User"
   belongs_to :to_user, class_name: "User"
-  has_one :chatroom
+  has_one :chatroom, dependent: :destroy
 end
