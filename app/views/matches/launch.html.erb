@@ -2,7 +2,9 @@
   <div class='card'>
     <h1>Bonjour <%= current_user.profile.first_name %></h1>
     <br>
-    <%= cl_image_tag current_user.profile.photo.key, class:"activity_image1"%>
+    <%= link_to matched_users_path do %>
+      <div class="activity_image1"></div>
+    <% end %>
   </div>
   <div class="card mt-4">
     <% if @matching %>
