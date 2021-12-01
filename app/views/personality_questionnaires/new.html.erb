@@ -2,7 +2,7 @@
   <%= simple_form_for @user, url: personality_questionnaire_path, method: :post do |f| %>
     <div class="wrapper-questionnaire">
     <% @questions.each_with_index do |question, index|%>
-      <div class="container-questionnaire">
+      <div class="container-questionnaire panel-<%=index%>">
         <h2>
           <%= question.label %>
         </h2>
@@ -14,6 +14,7 @@
                 <%= label_tag "response-#{response.id}", response.label %>
               </div>
             <% end %>
+
           </div>
         <% if index == @questions.size - 1 %>
           <%= link_to "Valider", matches_launch_path, class: "btn btn-principal container-submit" %>
