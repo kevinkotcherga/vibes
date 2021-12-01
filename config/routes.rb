@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       get :result
       get :reveal
       get :picture
+      get :search
     end
   end
 
