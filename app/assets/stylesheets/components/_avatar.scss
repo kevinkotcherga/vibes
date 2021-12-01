@@ -37,8 +37,8 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  border: 3px solid #f9fafb;
-  background: linear-gradient(#9000ff 20%, #720373);
+  border: 3px solid #0E0000;
+  background: white;
   position: relative;
   text-align: center;
   p {
@@ -48,6 +48,7 @@
     transform: translate(-50%, -50%);
     font-size: 1.7rem;
     font-weight: bold;
+    color: black;
   }
 }
 

@@ -1,7 +1,8 @@
 <div class="container text-white">
     <div class='card mt-5'>
+
       <% if @matching %>
-      <h1><%= current_user.profile.first_name %> tu as trouvé un match !</h1>
+      <h1><%= current_user.profile.first_name %> tu as un match !</h1>
         <br>
         <%= link_to chatroom_path(@matching.chatroom) do %>
           <div class="btn btn-principal">
@@ -17,6 +18,7 @@
           </div>
         <% end %>
       <% end %>
+
     </div>
   <div>
 </div>
