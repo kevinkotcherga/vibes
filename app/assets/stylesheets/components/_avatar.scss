@@ -31,13 +31,24 @@
 }
 
 .activity_image1 {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
   border: 3px solid #f9fafb;
+  background: linear-gradient(#9000ff 20%, #720373);
+  position: relative;
+  text-align: center;
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
 }
 
 .chrono {
