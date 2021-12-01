@@ -13,5 +13,6 @@
   <%= f.input :content, label: false, placeholder: "Type your message...#{@chatroom.name}" %>
   <% end %>
 
-  <%= link_to "Continuer", reveal_match_path(@chatroom.matching.id), class: "btn btn-gradient2" %>
+  <%= link_to "", reveal_match_path(@chatroom.matching.id), class: "position-absolute top-0 end-0 h-50 w-50" %>
+
 </div>

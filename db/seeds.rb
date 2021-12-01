@@ -8,13 +8,13 @@ User.destroy_all
 require "open-uri"
 
 p 'creating questions'
-question1 = Question.create(label: 'Tu es :', order: 1)
-question2 = Question.create(label: 'Tu recherches :', order: 2)
-question3 = Question.create(label: 'Tes amis te disent :', order: 3)
-question4 = Question.create(label: "Le caractère idéal selon toi :", order: 4)
-question5 = Question.create(label: 'Tes films préférés ?', order: 5)
-question6 = Question.create(label: "Qu'écoutes-tu ?", order: 6)
-question7 = Question.create(label: 'Tes sports préférés ?', order: 7)
+question1 = Question.create(label: 'Tu es', order: 1)
+question2 = Question.create(label: 'Tu recherches', order: 2)
+question3 = Question.create(label: 'Tes amis te disent', match: "Vos amis vous disent :", order: 3)
+question4 = Question.create(label: "Le caractère idéal selon toi", match: "Le caractère idéal selon vous :", order: 4)
+question5 = Question.create(label: 'Tes films préférés ', match: "Vos films préférés :", order: 5)
+question6 = Question.create(label: "Qu'écoutes-tu ", match: "Vous écoutez tous les deux :", order: 6)
+question7 = Question.create(label: 'Tes sports préférés ', match: "Vos sports préférés :", order: 7)
 # question8 = Question.create(label: "Tu aimes manger...", order: 8)
 # question9 = Question.create(label: 'Que préfères-tu lire ?', order: 9)
 # question10 = Question.create(label: 'Tu lis...', order: 10)

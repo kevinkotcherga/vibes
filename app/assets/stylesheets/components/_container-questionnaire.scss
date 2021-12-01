@@ -17,14 +17,67 @@
   margin: 0 15px;
   margin-top:15px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   h2 {
-    color: white;
     font-weight: bold;
     margin-bottom: 35px;
     padding: 0 12px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 120px;
+    color: black;
+    font-size: 36px;
     }
+}
+
+.panel-0 {
+  background: url(image-path("icon-0.png")), pink;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.panel-1 {
+  background: url(image-path("icon-1.png")), yellow;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.panel-2 {
+  background: url(image-path("icon-2.png")), coral;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.panel-3 {
+  background: url(image-path("icon-0.png")), blue;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.panel-4 {
+  background: url(image-path("icon-0.png")), tomato;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.panel-5 {
+  background: url(image-path("icon-0.png")), orange;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.panel-6 {
+  background: url(image-path("icon-0.png")), orangered;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
 }
 
 .wrapper-questionnaire {
@@ -56,7 +109,6 @@
   background: black;
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
-  margin-right: 20px;
 }
 
 .checkbox-transparent{

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # get '/matches/:id/picture', to: 'matches#picture'
   get '/matches/activity', to: 'matches#activity'
   get '/matched_users', to: 'matches#matched_users'
+  delete '/destroy_all', to: 'matches#destroy_all'
 
   resources :matches do
     member do
