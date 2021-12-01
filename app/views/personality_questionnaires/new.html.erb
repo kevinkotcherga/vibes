@@ -14,14 +14,14 @@
                 <%= label_tag "response-#{response.id}", response.label %>
               </div>
             <% end %>
-
           </div>
-        <% if index == @questions.size - 1 %>
-          <%= link_to "Valider", matches_launch_path, class: "btn btn-principal container-submit" %>
-        <% end %>
         </div>
       </div>
     <% end %>
+    <div class="container-questionnaire panel-last">
+      <h2>Es-tu prêt ?</h2>
+      <%= link_to "Valider", matches_launch_path, class: "btn btn-principal container-submit" %>
+    </div>
     </div>
   <% end %>
 </div>
