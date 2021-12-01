@@ -3,6 +3,7 @@
 <head>
   <title>Oups cette page n'existe pas (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
   <style>
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
 @import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
@@ -85,16 +86,31 @@ body {
   top: 200px;
   animation: grow 1s ease infinite;
 }
+
+.btn-back {
+  border: white solid 1px;
+  padding: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.btn-back > a {
+  text-decoration: none;
+  color: white;
+}
+
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
   <div class="container">
     <span class="left">404</span><br>
     <div class="pulse"></div>
-    <i class="fas fa-heart"></i>
-    <span class="right">Tu es perdu ?</span>
+      <i class="fas fa-heart"></i>
+      <span class="right">Tu es perdu ?</span>
+    <div class="btn-back">
+      <a href="https://www.vibes-app.online/matches/launch">Précédent</a>
+    </div>
   </div>
 </body>
 </html>
