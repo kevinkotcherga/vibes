@@ -20,7 +20,7 @@
     <ul class="ul-card-result">
       <% @responses_name.each do |response|%>
         <li class="li-card-result">
-          <%= response.question.label %>
+          <%= response.question.match %>
           <%= response.label %>
         </li>
       <% end %>
