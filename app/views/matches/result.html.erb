@@ -1,14 +1,11 @@
 <div class="container" data-controller="more-info">
-  <h1 id="ton-match">Ton match !</h1>
+  <h1 id="ton-match">Ta compatibilité avec ...</h1>
     <div class="contenant">
-      <%= image_tag("vibes-coeur.gif", class:'coeur_vibes')%>
-      <p class="coeur-pourcent w-70">80 %</p>
+      <%= image_tag("coeur-asymetrique.svg", class:'coeur_vibes')%>
+      <h1 class="first_name"><%= @user.profile.first_name %></h1>
+      <p class="coeur-pourcent w-50">80 %</p>
     </div>
-  <div class="hline"></div>
   <br>
-  <h1 class="first_name"><%= @user.profile.first_name %></h1>
-  <h2 class="display-4"><%= @user.profile.age %> ans</h2>
-
   <div class="savoir-plus" data-action="click->more-info#scrollToTop">
   <p>En savoir plus</p>
   <%= image_tag "outline_expand_more_white_24dp.png" %>
