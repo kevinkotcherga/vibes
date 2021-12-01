@@ -2,11 +2,9 @@
   <h1 class="mb-3 text-center"><%= @user.profile.first_name %></h1>
 
   <div class="messages" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
-    <div class="messages">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message, first_user: @chatroom.messages.first.user.id %>
       <% end %>
-    </div>
   </div>
 
   <%= simple_form_for [@chatroom, @message], remote: true do |f| %>
