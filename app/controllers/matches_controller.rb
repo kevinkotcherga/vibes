@@ -38,4 +38,8 @@ class MatchesController < ApplicationController
 
   def activity
   end
+
+  def destroy_all
+    Matching.destroy_all
+  end
 end
