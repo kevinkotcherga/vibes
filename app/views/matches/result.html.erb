@@ -14,13 +14,12 @@
   <%= image_tag "outline_expand_more_white_24dp.png" %>
   </div>
 
-  <p class="title-commun" data-more-info-target="title">Vos points communs :</p>
+  <p class="title-commun" data-more-info-target="title">Voici vos points communs</p>
 
   <div class="card">
     <ul class="ul-card-result">
       <% @responses_name.each do |response|%>
         <li class="li-card-result">
-          <%= response.question.match %>
           <%= response.label %>
         </li>
       <% end %>
