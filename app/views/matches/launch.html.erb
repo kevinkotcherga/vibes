@@ -1,16 +1,22 @@
 <div class="container text-white">
-  <div class='card'>
-    <h1>Bonjour <%= current_user.profile.first_name %></h1>
-    <br>
-    <%= cl_image_tag current_user.profile.photo.key, class:"activity_image1"%>
-  </div>
-  <div class="card mt-4">
-    <% if @matching %>
-      <h3 class="ready-text">Vous avez un match !</h3>
-      <%= link_to "Discuter", chatroom_path(@matching.chatroom) , class:"btn-principal" %>
-    <% else %>
-      <h3 class="ready-text">Prêt(e) à trouver l'amour ?</h3>
-      <%= link_to "C'est parti !", matched_users_path, class:"btn-principal" %>
-    <% end %>
-  </div>
+    <div class='card mt-5'>
+      <% if @matching %>
+      <h1><%= current_user.profile.first_name %> tu as trouvé un match !</h1>
+        <br>
+        <%= link_to chatroom_path(@matching.chatroom) do %>
+          <div class="btn btn-principal">
+            <p class="parag-btn">Discutez</p>
+          </div>
+        <% end %>
+      <% else %>
+      <h1><%= current_user.profile.first_name %> es-tu prêt ?</h1>
+        <br>
+        <%= link_to matched_users_path do %>
+          <div class="activity_image1">
+            <p class="parag-btn">Lancer la recherche</p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <div>
 </div>
