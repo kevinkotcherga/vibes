@@ -1,12 +1,19 @@
 // Specific CSS for your home-page
 
+.coeur_homepage {
+  width: 170px;
+  object-fit: cover;
+}
+
 .phrase-accroche {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
-é
-.phrase-accroche2 {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 20px;
+
+.phrase-accroche-48 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #B475DD;
 }

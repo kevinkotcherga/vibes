@@ -1,14 +1,19 @@
 <div id="home">
     <div class="container-homepage">
-      <%= image_tag("logo-dynam.gif", class:'logo_homepage')%>
+      <%= image_tag("vibes.svg", class:'logo_homepage')%>
+      <%= image_tag("coeur-asymetrique.svg", class:'coeur_homepage')%>
+
       <div class="content-homepage">
-        <p class="phrase-accroche">Tu es plus qu’une photo.</p>
-        <br>
-        <p class="phrase-accroche2">Tu as des <span style="color:#9D40FF">histoires</span> à raconter et des passions à <span style="color:#9D40FF">partager</span>.</p>
         <br>
         <br>
-        <%= link_to "Connexion", user_session_path, class: "btn btn-connexion w-50" %>
-        <%= link_to "Inscription", new_user_session_path, class: "btn btn-principal w-50" %>
+        <p class="phrase-accroche-48">48 heures</p>
+        <p class="phrase-accroche">pour se découvrir.</p>
+        <br>
+        <br>
+        <br>
+        <%= link_to "Connexion", user_session_path, class: "btn btn-connexion" %>
+        <br>
+        <%= link_to "Inscription", new_user_session_path, class: "btn btn-principal" %>
       </div>
     </div>
 </div>
