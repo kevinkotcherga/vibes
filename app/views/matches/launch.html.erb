@@ -9,10 +9,10 @@
           </div>
         <% end %>
       <% else %>
-      <h1><%= current_user.profile.first_name %> es-tu prêt ?</h1>
+      <h1 class="titre-pret"><%= current_user.profile.first_name %> es-tu prêt ?</h1>
         <br>
         <%= link_to matched_users_path do %>
-          <div class="activity_image1">
+          <div class="activity_image1 mt-5">
             <p class="parag-btn">Lancer la recherche</p>
           </div>
         <% end %>
