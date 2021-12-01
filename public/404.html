@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>Oups cette page n'existe pas (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
+@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+
+html {
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #070118;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  flex-direction: column;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.left {
+  font-size: 200px;
+  color: white;
+  text-shadow: 1px 1px 10px rgba(purple,1);
+  animation: 1.2s ease-out 0s 1 slideInFromLeft;
+  margin-top: 10px;
+}
+
+.right {
+  animation: 1.2s ease-out 0s 1 slideInFromRight;
+  color: #9D40FF;
+  margin-top: 30px;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
   }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
+  60% {
+    color: #9D40FF;
   }
+  100% {
+    transform: scale(1.2);
+    color: blue;
+  }
+}
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+.fa-heart {
+  margin-bottom: 5px;
+  color: pink;
+  font-size: 50px;
+  top: 200px;
+  animation: grow 1s ease infinite;
+}
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body>
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+  <div class="container">
+    <span class="left">404</span><br>
+    <div class="pulse"></div>
+    <i class="fas fa-heart"></i>
+    <span class="right">Tu es perdu ?</span>
   </div>
 </body>
 </html>

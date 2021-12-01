@@ -1,5 +1,5 @@
 <div class="px-3">
-  <h1 class="mb-3 text-center">Talk with your match !<%= @chatroom.name %></h1>
+  <h1 class="mb-3 text-center"><%= @user.profile.first_name %></h1>
 
   <div class="messages" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
     <div class="messages">
@@ -13,8 +13,6 @@
   <%= f.input :content, label: false, placeholder: "Type your message...#{@chatroom.name}" %>
   <% end %>
 
-
   <%= link_to "", reveal_match_path(@chatroom.matching.id), class: "position-absolute top-0 end-0 h-20 w-50" %>
-
 
 </div>
