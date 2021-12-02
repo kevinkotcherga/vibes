@@ -1,9 +1,9 @@
 
-<div class="d-flex flex-column<% if message.user.id == first_user %> align-items-start <% else %> align-items-end <% end %> pb-3" id="message-<%= message.id %>">
+<div class="d-flex flex-column<% if message.user.id == current_user.id %> align-items-end <% else %> align-items-start <% end %> pb-3" id="message-<%= message.id %>">
   <small>
     <strong><%= message.user.profile.first_name %></strong> - <i><%= message.created_at.strftime("%Hh%M") %></i>
   </small>
-  <div class="my-2 px-3 <% if message.user.id == first_user %> bg-primary1 <% else %> bg-secondary2 <% end %> rounded-message">
+  <div class="my-2 px-3 <% if message.user.id == current_user.id %> bg-primary1 <% else %> bg-secondary2 <% end %> rounded-message">
     <p class="mb-0 py-1"><%= message.content %></p>
   </div>
 </div>
