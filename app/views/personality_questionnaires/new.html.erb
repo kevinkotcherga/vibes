@@ -23,11 +23,8 @@
       <h1 class="titre-pret"><%= current_user.profile.first_name %> es-tu prêt ?</h1>
         <br>
         <%= link_to matched_users_path do %>
-          <div class="div-svg">
-            <svg width="176" height="165" viewBox="0 0 176 165" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-heart">
-            <path d="M51.1701 4.70786C77.1361 9.93414 88.9564 30.4727 89.3707 45.6238C95.6144 31.8128 115.706 8.53876 140.933 16.6107C168.628 25.4725 178.864 54.2436 168.245 80.4608C153.272 117.426 121.008 137.525 66.3071 160.212C46.2308 102.749 10.3116 79.0823 4.81511 51.2651C-1.14291 21.1119 26.7022 -0.216905 51.1701 4.70786Z" fill="white" stroke="black" stroke-width="7"/>
-            </svg>
-            <p class="parag-btn">Lancer la recherche</p>
+          <div class="container-recherche">
+            <%= image_tag("coeur-go.svg", class:'coeur_go')%>
           </div>
         <% end %>
       </div>
