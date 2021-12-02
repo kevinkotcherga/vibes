@@ -1,6 +1,6 @@
 <br>
 <div class="container">
-  <h1> Voici la photo de votre partenaire ! </h1>
+  <h1> Voici la photo de <%= @user.profile.first_name %> ! </h1>
   <br>
   <%= cl_image_tag @user.profile.photo.key, class:"activity_image1"%>
   <br>
