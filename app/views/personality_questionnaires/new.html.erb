@@ -23,9 +23,7 @@
       <h1 class="titre-pret"><%= current_user.profile.first_name %> es-tu prêt ?</h1>
         <br>
         <%= link_to matched_users_path do %>
-          <div class="container-recherche">
             <%= image_tag("coeur-go.svg", class:'coeur_go')%>
-          </div>
         <% end %>
       </div>
     </div>
