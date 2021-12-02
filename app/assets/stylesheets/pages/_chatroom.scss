@@ -25,15 +25,16 @@
   align-items: flex-start;
 
   .message {
-    min-width: 10%;
-    max-width: 70%;
-
+    align-items: flex-start;
     .rounded-message {
+      min-width: 10%;
+      max-width: 70%;
       border-radius: 12px 12px 12px 0;
       background-color: none;
       border: white 1px solid;
     }
     &.current_user {
+      align-items: flex-end;
       align-self: flex-end;
       .rounded-message {
         border-color: #8243ab;
