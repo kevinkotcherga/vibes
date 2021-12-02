@@ -1,5 +1,5 @@
 <div class="px-3">
-  <h1 class="mb-3 text-center"><%= @user.profile.first_name %></h1>
+  <h1 class="mb-3 mt-3 text-center"><%= @user.profile.first_name %></h1>
 
   <div class="messages" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
