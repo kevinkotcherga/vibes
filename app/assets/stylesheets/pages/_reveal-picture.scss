@@ -16,7 +16,7 @@
 .element {
   height: 250px;
   width: 250px;
-  border-radius: 8%;
+  border-radius: 50%;
   overflow: hidden;
   position: relative;
 }
@@ -37,6 +37,8 @@
 }
 .element::after {
   content: "Mathilde";
+  color: white;
+  border: solid 3px white;
   position: absolute;
   top: -100px;
   left: -100px;
