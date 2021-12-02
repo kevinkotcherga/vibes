@@ -20,17 +20,29 @@
   height: 60vh;
   /* background: red; */
   overflow-y: scroll;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-.rounded-message {
-  border-radius: 12px;
-}
+  .message {
+    min-width: 10%;
+    max-width: 70%;
 
-.bg-primary1{
-  background-color: #8243ab;
-}
-
-.bg-secondary2{
-  background-color: none;
-  border: white 1px solid;
+    .rounded-message {
+      border-radius: 12px 12px 12px 0;
+      background-color: none;
+      border: white 1px solid;
+    }
+    &.current_user {
+      align-self: flex-end;
+      .rounded-message {
+        border-color: #8243ab;
+        background-color: #8243ab;
+        border-radius: 12px 12px 0 12px;
+      }
+      p{
+        text-align: right;
+      }
+    }
+  }
 }
