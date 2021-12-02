@@ -1,5 +1,5 @@
 <div class="container" data-controller="more-info">
-  <h1 id="ton-match">Ton match :</h1>
+  <h1 id="ton-match">Ton match</h1>
   <h1 class="first_name"><%= @user.profile.first_name %></h1>
     <div class="contenant">
       <%= image_tag("coeur-fit.svg", class:'coeur_vibes')%>
@@ -8,13 +8,13 @@
     <br>
       <h2 id="compatibilite">de compatibilité</h2>
   <br>
-  <p id="details"> Vous avez 93% de réponses en commun avec <%= @user.profile.first_name %> </p>
+  <p id="details"> Vous avez 80% de réponses en commun avec <%= @user.profile.first_name %> </p>
   <div class="savoir-plus" data-action="click->more-info#scrollToTop">
   <p>En savoir plus</p>
   <%= image_tag "outline_expand_more_white_24dp.png" %>
   </div>
 
-  <p class="title-commun" data-more-info-target="title">Voici vos points communs</p>
+  <p class="title-commun" data-more-info-target="title">Vos points communs</p>
 
   <div class="card-result">
     <ul class="ul-card-result">
