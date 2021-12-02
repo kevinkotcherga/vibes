@@ -22,7 +22,7 @@ class MatchesController < ApplicationController
 
     if @matching.save
       @matching.status = "valid"
-      redirect_to result_match_path(@matching)
+      redirect_to search_match_path(@matching)
     else
       redirect_to matches_launch_path
     end
@@ -37,6 +37,10 @@ class MatchesController < ApplicationController
   end
 
   def activity
+  end
+
+  def search
+    @matching = Matching.find(params[:id])
   end
 
   def destroy_all
