@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+:root {
+  --background-clr: #f2f2f2;
+  --main-clr: #410294;
+  --second-clr: #b4fee7;
+  --third-clr: #8243ab;
+}
+
+.element {
+  height: 250px;
+  width: 250px;
+  border-radius: 8%;
+  overflow: hidden;
+  position: relative;
+}
+
+.element::before,
+.element::after {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--second-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element::before {
+  height: 100%;
+  width: 100%;
+}
+.element::after {
+  content: "Mathilde";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: var(--third-clr);
+  transform-origin: bottom;
+  animation: reveal 5s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  font-family: Montserrat, sans-serif;
+}
+
+@keyframes reveal {
+  to {
+    transform: rotateZ(-90deg);
+  }
+}
