@@ -1,5 +1,5 @@
 
-<div class="d-flex flex-column<% if message.user.id == current_user.id %> align-items-end <% else %> align-items-start <% end %> pb-3" id="message-<%= message.id %>">
+<div class="message d-flex flex-column <%= "current_user" if message.user.id == current_user.id %>  pb-3" id="message-<%= message.id %>">
   <small>
     <strong><%= message.user.profile.first_name %></strong> - <i><%= message.created_at.strftime("%Hh%M") %></i>
   </small>
