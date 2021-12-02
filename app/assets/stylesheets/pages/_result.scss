@@ -1,5 +1,5 @@
 .savoir-plus {
-  margin: 90px 0 90px 0;
+  margin: 40px 0 90px 0;
   p {
     margin: 0;
   }
@@ -45,4 +45,39 @@
   border-radius: 15px;
   width: 100%;
   border: 3px solid rgb(255, 255, 255);
+}
+
+.coeur-pourcent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#ton-match {
+  color: #fafafa;
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 70px;
+  margin-bottom: 52px;
+}
+
+#compatibilite {
+  font-size: 30px;
+  font-weight: 600;
+  color: #be94fa;
+}
+
+.first_name {
+  color: #be94fa;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 42px;
+}
+
+#details {
+  margin-top: 48px;
+  font-size: 15px;
 }
