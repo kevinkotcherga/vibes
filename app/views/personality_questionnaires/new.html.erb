@@ -2,29 +2,31 @@
   <%= simple_form_for @user, url: personality_questionnaire_path, method: :post do |f| %>
     <div class="wrapper-questionnaire">
     <% @questions.each_with_index do |question, index|%>
-      <div class="container-questionnaire panel-<%=index%>">
-        <h2>
-          <%= question.label %>
-        </h2>
-        <div class="container-responses">
-          <div class="container-answer">
-            <% question.responses.each do |response| %>
-              <div>
-                <%= check_box_tag 'user[response_ids][]', response.id, false, id: "response-#{response.id}", class: "checkbox-transparent" %>
-                <%= label_tag "response-#{response.id}", response.label %>
-              </div>
-            <% end %>
+      <div>
+        <div class="container-questionnaire panel-<%=index%>">
+          <h2>
+            <%= question.label %>
+          </h2>
+          <div class="container-responses">
+            <div class="container-answer">
+              <% question.responses.each do |response| %>
+                <div>
+                  <%= check_box_tag 'user[response_ids][]', response.id, false, id: "response-#{response.id}", class: "checkbox-transparent" %>
+                  <%= label_tag "response-#{response.id}", response.label %>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-
-    <div class="container-questionnaire panel-last">
-      <h1 class="titre-pret"><%= current_user.profile.first_name %> es-tu prêt ?</h1>
-        <br>
-        <%= link_to matched_users_path do %>
-            <%= image_tag("coeur-go.svg", class:'coeur_go')%>
-        <% end %>
+    <div>
+      <div class="container-questionnaire panel-last">
+        <h1 class="titre-pret"><%= current_user.profile.first_name %> es-tu prêt ?</h1>
+          <br>
+          <%= link_to matched_users_path do %>
+              <%= image_tag("coeur-go.svg", class:'coeur_go')%>
+          <% end %>
       </div>
     </div>
   <% end %>
