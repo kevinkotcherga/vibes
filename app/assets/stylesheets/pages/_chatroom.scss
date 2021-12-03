@@ -27,8 +27,9 @@
   .message {
     align-items: flex-start;
     .rounded-message {
-      min-width: 30%;
+      min-width: fit-content;
       max-width: 70%;
+      // width: 100%;
       border-radius: 12px 12px 12px 0;
       background-color: none;
       border: white 1px solid;
